@@ -5,7 +5,6 @@
     <link rel="stylesheet" type="text/css" href="reset.css"/>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet">
-    <script type="text/javascript" scr="number_guesser.js"></script>
   </head>
 
   <body>
@@ -14,13 +13,22 @@
     </header>
 
     <section class="input-wrapper">
-      <input type="text" name="userData" value="Enter your guess" style="width:550px; height:30px; ">
+      <input class="user-data" type="text" name="userData" value="Enter your guess" style="width:550px; height:40px; ">
       <br>
 
-      <button type="button" name="guess">Guess</button>
-      <button type="button" name="clear">Clear</button>
+      <div class="topButtons">
+        <button class="guess" type="button" name="guess">Guess</button>
+        <button type="button" name="clear">Clear</button>
+      </div>
+
+      <br>
+      <div class="output">
+      </div>
       <br>
       <button class="resetButton" type="button" name="reset">Reset</button>
     </section>
   </body>
+
+  <script type="text/javascript" src="number_guesser.js"></script>
+
 </html>

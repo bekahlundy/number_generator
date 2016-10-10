@@ -22,7 +22,7 @@ header .pinkNumber {
 
 header .whiteGuesser {
   color: #E6E7E8;
-  font-weight:lighter;
+  font-weight:300;
 }
 
 .input-wrapper {
@@ -39,12 +39,16 @@ input {
   font-family: 'Open Sans', sans-serif;
 }
 
+.topButtons {
+  text-align: center;
+}
+
 button {
   background-color: #d0d2d3;
   color: #ffffff;
   border-radius: 25px;
-  width: 200px;
-  height: 40px;
+  width: 20%;
+  height: 42px;
   border: none;
   margin: 30px 50px;
   font-size: 26px;
