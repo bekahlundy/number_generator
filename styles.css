@@ -37,6 +37,7 @@ input {
   padding-left: 10px;
   letter-spacing: 0.04em;
   font-family: 'Open Sans', sans-serif;
+  outline: none;
 }
 
 .topButtons {
@@ -55,13 +56,14 @@ button {
   font-weight: lighter;
   letter-spacing: 0.07em;
   font-family: 'Open Sans', sans-serif;
+  outline: none;
 }
 
 button:hover {
   background-color: #eb008b;
 }
 
-.last-guess-message {
+.your-last-guess {
   color: #404041;
   font-size: 26px;
   margin-top: 20px;
