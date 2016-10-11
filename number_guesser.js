@@ -1,56 +1,57 @@
-//var to access the guess, clear, and reset
 var guess = document.querySelector('.guess');
 var clear = document.querySelector('.clear');
 var reset = document.querySelector('.reset');
 
-//creates a random number between 1-100 and stores it as randomNumber
-var randomNumber = Math.random() * 100;
+var randomNumber = Math.round(Math.random() * 100);
 
-
-//trigger on click for the guess button - discuss.
 guess.addEventListener('click', function() {
-  //var to access the user-data input field
-  var userInput = parseInt((document.querySelector('.user-data').value),10);
+  var userInput = getNumber();
+  errorMessage();
+  result();
   var message = compareGuessRandom(userInput, randomNumber);
-debugger;
+  var messageDiv = document.querySelector('.message-div');
+  messageDiv.innerHTML = message;
+    document.querySelector('.last-guess').innerText = userInput;
+    document.querySelector('.last-guess-message').innerText = "Your last guess was";
+});
 
-  var messageDiv = document.querySelector('.message-div').innerText(message);
-  // messageDiv.innerHTML(message);
+function getNumber () {
+return parseInt((document.querySelector('.user-data').value),10);
+}
+
+function errorMessage () {
+  var input = getNumber();
+  return isNaN(input) || (input < 1 && input > 100);
+}
+
+function result() {
+  var input = getNumber();
+  if (input < randomNumber ) {
+  return "That is too low";
+} else if (input > randomNumber ) {
+  return "That is too high";
+} else {
+  return "perfect";
+}}
+
+function compareGuessRandom () {
+  if (errorMessage()){
+    return "Yo, enter a number!";
+  } else {
+    result();
+  }}
+
+clear.addEventListener('click', function() {
+  document.querySelector('.user-data').value = "";
+});
+
+clear.addEventListener('click', function() {
+  document.querySelector('.user-data').value = "";
 });
 
 
 
-
-function compareGuessRandom (input,  num ) {
-  if (input < num ) {
-     return "That is too low";
-  } else if (input > num ) {
-    return "That is too high";
-  } else if (input === num ) {
-    return "perfect";
-  } else {
-    return "What?!";
-  }
-}
-
-
-
-
-// function compareGuessRandom (userInput, randomNumber) {
-//   if (userInput<randomNumber) {
-//      return "That is too low";
-//   } else if (userInput>randomNumber) {
-//     message = ""
-//   } else if (userInput===randomNumber) {
-//     return
-//   } else {
-//     return
-//   }
-// }
-
-// document.querySelector('.last-guess').innerText = Math.round(randomNumber);
-//replace Math.round(randomNumber) with getGuessNumber
-
-//this converts the userInput into an integer.  the second argument, "10", ensures the decimal numeral system
-// var getGuessNumber = parseInt(userInput.value, 10);
-// }
+// if (typeof userInput !== "number") {
+//   document.querySelector('.last-guess').innerText = "";
+//   document.querySelector('.last-guess-message').innerText = "";
+// } else {

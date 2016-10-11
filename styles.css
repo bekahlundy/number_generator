@@ -61,7 +61,7 @@ button:hover {
   background-color: #eb008b;
 }
 
-/*.last-guess-message {
+.last-guess-message {
   color: #404041;
   font-size: 26px;
   margin-top: 20px;
@@ -71,7 +71,7 @@ button:hover {
 .last-guess {
   color: #eb008b;
   font-size: 250px;
-}*/
+}
 
 .resetButton {
   margin-top: 350px;
