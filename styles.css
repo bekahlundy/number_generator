@@ -51,7 +51,7 @@ button {
   width: 20%;
   height: 42px;
   border: none;
-  margin: 30px 50px;
+  margin: 30px 50px 0 50px;
   font-size: 26px;
   font-weight: lighter;
   letter-spacing: 0.07em;
@@ -76,7 +76,7 @@ button:hover {
 }
 
 .resetButton {
-  margin-top: 350px;
+  margin-top: 230px;
   width: 550px;
   font-size: 20px;
 }
