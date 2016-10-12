@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="reset.css"/>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=true;">
   </head>
 
   <body>
@@ -14,13 +15,13 @@
 
     <section class="input-wrapper">
 
-      <input class="user-data" type="number" name="userData" placeholder="Enter your guess" style="width:550px; height:40px;" min="1" max="100">
+      <input class="user-data" type="text" name="userData" placeholder="Enter your guess" min="1" max="100">
       <br>
 
       <div class="topButtons">
-        <button class="guess" type="button" name="guess">Guess</button>
+        <button class="guess" type="button" name="guess" disabled>Guess</button>
 
-        <button class="clear" type="button" value="reset">Clear</button>
+        <button class="clear" type="button" value="reset" disabled>Clear</button>
       </div>
 
       <p class="your-last-guess"></p>
@@ -36,7 +37,7 @@
       </div>
 
       <br>
-      <button class="resetButton" type="button" name="reset">Reset</button>
+      <button class="resetButton" type="button" name="reset" disabled>Reset</button>
     </section>
   </body>
 
